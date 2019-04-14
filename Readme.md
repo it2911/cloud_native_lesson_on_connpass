@@ -20,7 +20,7 @@ Gather the engineers who interesting in the Cloud Native Technical. And support 
     1. Create etcd Cluster.
     2. Learn how get backup from etcd.
     3. Learn about the Kubernetes Master HA.
-    4. Create Kubernetes Master.
+    ~~4. Create Kubernetes Master.~~
 
 3. [Create a Kubernetes Cluster by manually 3. @ **2019/04/15( Coming soon )**]
 
