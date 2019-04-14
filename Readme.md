@@ -4,7 +4,7 @@
 This Course will include **the newest and the most popular** Cloud Native Technical. 
 
 ### 2.Why Create This Course
-Gather the engineers who interesting in the Cloud Native Technical. And support the platform for Open Source Soft to introduce their amazing product.
+Gather the engineers who interesting in the Cloud Native Technical. And support the platform for Open Source Software to introduce their amazing product.
 
 ### 3.The Course Schedule
 1. [Create a Kubernetes Cluster by manually 1. @ **2019/03/14( Done )**](20190314_Kubernetes_Lesson_1/1.How_Create_A_Kubernetes_Cluster_1.md)
