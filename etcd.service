@@ -7,11 +7,16 @@ Documentation=https://github.com/coreos
 
 [Service]
 Type=notify
+# Confirm this folder is exist before you start the etcd.
 WorkingDirectory=/data/k8s/etcd/data
-ExecStart=/home/mayuxuan0323/k8s/bin/etcd \
+# Change this file path by your environment.
+ExecStart=/home/mayuxuan0323/k8s/bin/etcd  \
+  # Confirm this folder is exist before you start the etcd.
   --data-dir=/data/k8s/etcd/data \
+  # Confirm this folder is exist before you start the etcd.
   --wal-dir=/data/k8s/etcd/wal \
-  --name=etcd-1 # Node Name. Need change by node. \ 
+  # Node Name. Need change by node.
+  --name=etcd-1 \ 
   --cert-file=/etc/etcd/cert/etcd.pem \
   --key-file=/etc/etcd/cert/etcd-key.pem \
   --trusted-ca-file=/etc/kubernetes/cert/ca.pem \
@@ -20,12 +25,17 @@ ExecStart=/home/mayuxuan0323/k8s/bin/etcd \
   --peer-trusted-ca-file=/etc/kubernetes/cert/ca.pem \
   --peer-client-cert-auth \
   --client-cert-auth \
-  --listen-peer-urls=https://10.146.0.3:2380 # Node IP. Need change by node. \
-  --initial-advertise-peer-urls=https://10.146.0.3:2380  # Node IP. Need change by node. \
-  --listen-client-urls=https://10.146.0.3:2379,http://127.0.0.1:2379 # Node IP. Need change by node. \ 
-  --advertise-client-urls=https://10.146.0.3:2379 \ # Node IP. Need change by node.
+  # Node IP. Need change by node.
+  --listen-peer-urls=https://10.146.0.3:2380 \
+  # Node IP. Need change by node.
+  --initial-advertise-peer-urls=https://10.146.0.3:2380 \
+  # Node IP. Need change by node.
+  --listen-client-urls=https://10.146.0.3:2379,http://127.0.0.1:2379 \ 
+  # Node IP. Need change by node.
+  --advertise-client-urls=https://10.146.0.3:2379 \ 
   --initial-cluster-token=etcd-cluster-0 \
-  --initial-cluster=etcd-1=https://10.146.0.3:2380,etcd-2=https://10.142.0.2:2380,etcd-3=https://10.146.0.4:2380 # Node IPs. \
+  # Node IPs.
+  --initial-cluster=etcd-1=https://10.146.0.3:2380,etcd-2=https://10.142.0.2:2380,etcd-3=https://10.146.0.4:2380 \
   --initial-cluster-state=new \
   --auto-compaction-mode=periodic \
   --auto-compaction-retention=1 \
