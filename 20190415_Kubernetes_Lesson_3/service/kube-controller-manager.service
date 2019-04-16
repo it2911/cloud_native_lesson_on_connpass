@@ -2,7 +2,7 @@
 Description=Kubernetes Controller Manager
 Documentation=https://github.com/GoogleCloudPlatform/kubernetes
 [Service]
-WorkingDirectory=/home/mayuxuan0323/k8s/data/kube-controller-manager
+#WorkingDirectory=/home/mayuxuan0323/k8s/data/kube-controller-manager
 ExecStart=/home/mayuxuan0323/k8s/bin/kube-controller-manager \
   --port=0 \
   --secure-port=10252 \
@@ -30,5 +30,6 @@ ExecStart=/home/mayuxuan0323/k8s/bin/kube-controller-manager \
   --v=2
 Restart=on-failure
 RestartSec=5
+User=k8s
 [Install]
 WantedBy=multi-user.target
